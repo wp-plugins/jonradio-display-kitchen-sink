@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /*
 Plugin Name: jonradio Display Kitchen Sink
 Plugin URI: http://jonradio.com/plugins/jonradio-kitchen-sink/

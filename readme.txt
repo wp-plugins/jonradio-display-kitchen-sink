@@ -1,4 +1,4 @@
-﻿=== jonradio Display Kitchen Sink ===
+=== jonradio Display Kitchen Sink ===
 Contributors: jonradio
 Donate link: http://jonradio.com/plugins
 Tags: editor, TinyMCE, edit, page, post
