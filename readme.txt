@@ -18,7 +18,7 @@ When this plugin is activated, all users will see the second row of icons ("The 
 
 This section describes how to install the plugin and get it working.
 
-1. Use "Add Plugin" within the WordPress Admin panel to download and install this plugin from the WordPress.org plugin repository (preferred method).  Or download and unzip this plugin, then upload the `/jonradio-kitchen-sink/` directory to your WordPress web site's `/wp-content/plugins/` directory
+1. Use "Add Plugin" within the WordPress Admin panel to download and install this plugin from the WordPress.org plugin repository (preferred method).  Or download and unzip this plugin, then upload the `/jonradio-display-kitchen-sink/` directory to your WordPress web site's `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Frequently Asked Questions ==
