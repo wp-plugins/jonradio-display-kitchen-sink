@@ -3,8 +3,8 @@ Contributors: jonradio
 Donate link: http://jonradio.com/plugins
 Tags: editor, TinyMCE, edit, page, post
 Requires at least: 3.0
-Tested up to: 3.3.2
-Stable tag: 1.0
+Tested up to: 3.4
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,10 @@ You could alter the php code in this plugin. You could also contact the Plugin a
 
 == Changelog ==
 
+= 1.1 =
+* Verify compatiblity with Version 3.4 of WordPress, via RC2
+* Correct name of plugin's main php file and web site page URL to both match folder name
+
 = 1.0 =
 * Eliminate Activation "excess characters" error by removing BOM from UTF-8 file encoding
 * Switch to UNIX End of Line sequences, from Windows
@@ -45,6 +49,9 @@ You could alter the php code in this plugin. You could also contact the Plugin a
 * Clean up php to meet WordPress coding standards
 
 == Upgrade Notice ==
+
+= 1.1 =
+Production version 1.0 incorrectly named the main php file
 
 = 1.0 =
 Beta version 0.9 generated excess characters at Activation
