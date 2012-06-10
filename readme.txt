@@ -51,7 +51,7 @@ You could alter the php code in this plugin. You could also contact the Plugin a
 == Upgrade Notice ==
 
 = 1.1 =
-Production version 1.0 incorrectly named the main php file
+Production version 1.0 incorrectly named the main php file.  This may require deleting and re-installing the plugin to move from 1.0 to 1.1.
 
 = 1.0 =
 Beta version 0.9 generated excess characters at Activation
