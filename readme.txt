@@ -16,29 +16,6 @@ When this plugin is activated, all users will see the second row of icons ("The 
 
 The Troubleshooting, Installation and FAQ tabs provide helpful information, both to get started, and to address concerns you might have about the plugin not working as you were expecting it would.
 
-== Troubleshooting ==
-
-Here are some ideas that might help you figure out what things are not working as you expect them to, when you use this plugin with WordPress.
-
-= First Place to Check =
-
-Be sure that the Visual Editor is not disabled for the User experiencing the problem of not seeing the "Kitchen Sink".
-
-If it is you, in the WordPress Admin panels, go to Users then Your Profile in the Users submenu.  The first setting is "Disable the visual editor when writing".  The Checkbox must be **Empty** (no checkmark), then hit the Update Profile button at the very bottom of the panel.
-
-= Check the Basics =
-
-In the WordPress Admin panels, you should be in Posts or Pages submenu, on an Add New or Edit Page/Post panel.  Please verify that:
-
-1. You see the Visual and Text tabs 
-1. That the word “Visual” is black and “Text” is grey 
-1. If the Kitchen Sink plugin is working, you should see two rows of icons:  Row 1 begins with a “B”, Row 2 begins with a drop-down box with Paragraph, Heading or something similar. 
-1. If Kitchen Sink is turned off, you will only see one row.
-
-If the last point (see only one row) is your situation, then go to the Installed Plugins page of WordPress Admin panels.  *jonradio Display Kitchen Sink* should have a white background, not a grey background.  Grey indicates that it is Not Activated.  In which case, you could click on Activate.
-
-See the FAQ tab for additional information.
-
 == Installation ==
 
 This section describes how to install the *jonradio Display Kitchen Sink* plugin and get it working.
@@ -85,3 +62,26 @@ Production version 1.0 incorrectly named the main php file.  WordPress may (i.e.
 
 = 1.0 =
 Beta version 0.9 generated excess characters at Activation
+
+== Troubleshooting ==
+
+Here are some ideas that might help you figure out what things are not working as you expect them to, when you use this plugin with WordPress.
+
+= First Place to Check =
+
+Be sure that the Visual Editor is not disabled for the User experiencing the problem of not seeing the "Kitchen Sink".
+
+If it is you, in the WordPress Admin panels, go to Users then Your Profile in the Users submenu.  The first setting is "Disable the visual editor when writing".  The Checkbox must be **Empty** (no checkmark), then hit the Update Profile button at the very bottom of the panel.
+
+= Check the Basics =
+
+In the WordPress Admin panels, you should be in Posts or Pages submenu, on an Add New or Edit Page/Post panel.  Please verify that:
+
+1. You see the Visual and Text tabs 
+1. That the word “Visual” is black and “Text” is grey 
+1. If the Kitchen Sink plugin is working, you should see two rows of icons:  Row 1 begins with a “B”, Row 2 begins with a drop-down box with Paragraph, Heading or something similar. 
+1. If Kitchen Sink is turned off, you will only see one row.
+
+If the last point (see only one row) is your situation, then go to the Installed Plugins page of WordPress Admin panels.  *jonradio Display Kitchen Sink* should have a white background, not a grey background.  Grey indicates that it is Not Activated.  In which case, you could click on Activate.
+
+See the FAQ tab for additional information.
