@@ -14,7 +14,7 @@ All users will have the Kitchen Sink -- the second row of icons displayed in Vis
 
 When this plugin is activated, all users will see the second row of icons ("The Kitchen Sink") displayed in the Admin panel's Page Edit and Post Edit Visual tab. Clicking the first row's Kitchen Sink icon will only momentarily hide the second row of icons.
 
-The Troubleshooting, Installation and FAQ tabs provide helpful information, both to get started, and to address concerns you might have about the plugin not working as you were expecting it would.
+The Other Notes (Troubleshooting section), Installation and FAQ tabs provide helpful information, both to get started, and to address concerns you might have about the plugin not working as you were expecting it would.
 
 == Installation ==
 
@@ -22,7 +22,7 @@ This section describes how to install the *jonradio Display Kitchen Sink* plugin
 
 1. Use **Add Plugin** within the WordPress Admin panel to download and install this *jonradio Display Kitchen Sink* plugin from the WordPress.org plugin repository (preferred method).  Or download and unzip this plugin, then upload the `/jonradio-display-kitchen-sink/` directory to your WordPress web site's `/wp-content/plugins/` directory.
 1. Activate the *jonradio Display Kitchen Sink* plugin through the **Installed Plugins** Admin panel in WordPress.  If you have a WordPress Network ("Multisite"), you can either **Network Activate** this plugin through the **Installed Plugins** Network Admin panel, or Activate it individually on the sites where you wish to use it.  Activating on individual sites within a Network avoids some of the confusion created by WordPress' hiding of Network Activated plugins on the Plugin menu of individual sites.  Alternatively, to avoid this confusion, you can install the *jonradio Reveal Network Activated Plugins* plugin.
-1. If things are not working as you expect, please look at the Troubleshooting and FAQ tabs.
+1. If things are not working as you expect, please look at the Other Notes (Troubleshooting section) and FAQ tabs.
 
 == Frequently Asked Questions ==
 
@@ -78,8 +78,8 @@ If it is you, in the WordPress Admin panels, go to Users then Your Profile in th
 In the WordPress Admin panels, you should be in Posts or Pages submenu, on an Add New or Edit Page/Post panel.  Please verify that:
 
 1. You see the Visual and Text tabs 
-1. That the word “Visual” is black and “Text” is grey 
-1. If the Kitchen Sink plugin is working, you should see two rows of icons:  Row 1 begins with a “B”, Row 2 begins with a drop-down box with Paragraph, Heading or something similar. 
+1. That the word "Visual" is black and "Text" is grey 
+1. If the Kitchen Sink plugin is working, you should see two rows of icons:  Row 1 begins with a "B", Row 2 begins with a drop-down box with Paragraph, Heading or something similar. 
 1. If Kitchen Sink is turned off, you will only see one row.
 
 If the last point (see only one row) is your situation, then go to the Installed Plugins page of WordPress Admin panels.  *jonradio Display Kitchen Sink* should have a white background, not a grey background.  Grey indicates that it is Not Activated.  In which case, you could click on Activate.
