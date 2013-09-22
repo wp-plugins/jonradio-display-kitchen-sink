@@ -3,7 +3,7 @@
 Plugin Name: jonradio Display Kitchen Sink
 Plugin URI: http://jonradio.com/plugins/jonradio-display-kitchen-sink/
 Description: All users will have the Kitchen Sink displayed in Visual mode for both the Page and Post Editors.
-Version: 2.0
+Version: 2.0.1
 Author: jonradio
 Author URI: http://jonradio.com/plugins
 License: GPLv2

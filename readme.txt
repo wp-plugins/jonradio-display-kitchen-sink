@@ -4,7 +4,7 @@ Donate link: http://jonradio.com/plugins
 Tags: editor, TinyMCE, edit, page, post, plugin, posting, kitchen sink
 Requires at least: 3.1.0
 Tested up to: 3.6.1
-Stable tag: 2.0
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -46,6 +46,9 @@ You could alter the php code in this plugin. You could also contact the Plugin a
 
 == Changelog ==
 
+= 2.0.1 =
+* Add code on Setting page to detect versions of WordPress older than 3.1.0
+
 = 2.0 =
 * Add Settings page for each Site with detailed Troubleshooting information
 
@@ -61,6 +64,9 @@ You could alter the php code in this plugin. You could also contact the Plugin a
 * Clean up php to meet WordPress coding standards
 
 == Upgrade Notice ==
+
+= 2.0.1 =
+Remove error messages when Settings page run on versions of WordPress older than 3.1.0
 
 = 2.0 =
 Settings page added to provide Troubleshooting information.

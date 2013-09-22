@@ -65,75 +65,87 @@ function jr_dks_settings_page() {
 	</h3>
 	<p>
 	<?php
-	
-	$editor_disabled = array();
-	foreach ( $users = get_users( array( 'fields' => 'all_with_meta' ) ) as $obj ) {
-		/*	get_users() returns array[integer user ID] containing an object
-			with elements like:  'user_email'=>'e-mailname@domain.com'
-			rich_editing is a string with values of "true" or "false"
-		*/
-		if ( 'false' === $obj->rich_editing ) {
-			$editor_disabled[] = $obj->ID;
-		}
-	}
-	echo 'There ' .  sprintf( _n( 'is only one User', 'are %s Users', count( $users ) ), count( $users ) ) . ' registered to access this WordPress site';
-	
-	if ( 0 === count( $editor_disabled ) ) {
-		echo _n( ' and that User has', '. All of them have', count( $users ) );
-		echo ' the Visual Editor enabled in their User Profile for this Site, allowing them to see the Kitchen Sink whenever the Visual tab is selected.</p>';
+	/*	Catch old unsupported version of WordPress before any damage can be done.
+	*/
+	if ( version_compare( get_bloginfo( 'version' ), '3.1.0', '<' ) ) {
+		?>
+		<b>
+		This plugin is not supported, and this section is not available,
+		in your Version of WordPress,
+		which is older than the Version 3.1.0 required by this plugin to operate reliably.
+		</b>
+		If you wish to use this plugin, please consider upgrading to the current version of WordPress.
+		<?php
 	} else {
-		if ( count( $users ) === count( $editor_disabled ) ) {
-			echo _n( ', but that one, shown below, has', '. All of them, shown below, have', count( $editor_disabled ) );
-		} else {
-			printf( _n( '. One of them, shown below, has', '; %s of them, shown below, have', count( $editor_disabled ) ), count( $editor_disabled ) );
-		}
-		echo ' the Visual Editor disabled in their User Profile for this Site, making it impossible for them to view the Kitchen Sink.</p><table class="widefat"><tbody>';
-		$td_style = 'style="text-align: center; vertical-align: middle"';
-		$td = "<td $td_style>";
-		$head_foot = array( 'head' );
-		if ( count( $editor_disabled ) > 9 ) {
-			/*	Table is large enough to justify a Footer of Column titles.
+		$editor_disabled = array();
+		foreach ( $users = get_users( array( 'fields' => 'all_with_meta' ) ) as $obj ) {
+			/*	get_users() returns array[integer user ID] containing an object
+				with elements like:  'user_email'=>'e-mailname@domain.com'
+				rich_editing is a string with values of "true" or "false"
 			*/
-			$head_foot[] = 'foot';
-		}
-		foreach ( $head_foot as $where ) {
-			echo "<t$where><tr>";
-			foreach ( array( 'User ID', 'Username', 'Role', 'Display Name', 'User e-mail', 'Edit User' ) as $title ) {
-				echo "<th $td_style>$title</th>";
+			if ( 'false' === $obj->rich_editing ) {
+				$editor_disabled[] = $obj->ID;
 			}
-			echo "</tr></t$where>";
 		}
-		sort( $editor_disabled );
-		foreach ( $editor_disabled as $id ) {
-			echo '<tr>';
-			echo $td;
-			echo $id;
-			echo '</td>';
-			echo $td;
-			echo $users[$id]->user_login;
-			echo '</td>';
-			echo $td;
-			$user = new WP_User( $id );
-			if ( isset( $user->roles[0] ) ) {
-				echo $user->roles[0];
+		echo 'There ' .  sprintf( _n( 'is only one User', 'are %s Users', count( $users ) ), count( $users ) ) . ' registered to access this WordPress site';
+		
+		if ( 0 === count( $editor_disabled ) ) {
+			echo _n( ' and that User has', '. All of them have', count( $users ) );
+			echo ' the Visual Editor enabled in their User Profile for this Site, allowing them to see the Kitchen Sink whenever the Visual tab is selected.</p>';
+		} else {
+			if ( count( $users ) === count( $editor_disabled ) ) {
+				echo _n( ', but that one, shown below, has', '. All of them, shown below, have', count( $editor_disabled ) );
 			} else {
-				echo 'No Role on this Site';
+				printf( _n( '. One of them, shown below, has', '; %s of them, shown below, have', count( $editor_disabled ) ), count( $editor_disabled ) );
 			}
-			echo '</td>';
-			echo $td;
-			echo $users[$id]->display_name;
-			if ( '' != trim( $name = $users[$id]->user_firstname . ' ' . $users[$id]->user_lastname ) ) {
-				echo " ($name)";
+			echo ' the Visual Editor disabled in their User Profile for this Site, making it impossible for them to view the Kitchen Sink.</p><table class="widefat"><tbody>';
+			$td_style = 'style="text-align: center; vertical-align: middle"';
+			$td = "<td $td_style>";
+			$head_foot = array( 'head' );
+			if ( count( $editor_disabled ) > 9 ) {
+				/*	Table is large enough to justify a Footer of Column titles.
+				*/
+				$head_foot[] = 'foot';
 			}
-			echo '</td>';
-			echo $td;
-			echo $users[$id]->user_email;
-			echo '</td>';
-			echo $td;
-			echo '<a class="button-secondary" href="' . admin_url( "user-edit.php?user_id=$id&wp_http_referer=%2Fwp-admin%2Fusers.php%3Fpage%3Djr_dks_settings" ) . '">Profile</a>';  // &wp_http_referer=%2Fwp-admin%2Fusers.php
-			echo '</td></tr>';
+			foreach ( $head_foot as $where ) {
+				echo "<t$where><tr>";
+				foreach ( array( 'User ID', 'Username', 'Role', 'Display Name', 'User e-mail', 'Edit User' ) as $title ) {
+					echo "<th $td_style>$title</th>";
+				}
+				echo "</tr></t$where>";
+			}
+			sort( $editor_disabled );
+			foreach ( $editor_disabled as $id ) {
+				echo '<tr>';
+				echo $td;
+				echo $id;
+				echo '</td>';
+				echo $td;
+				echo $users[$id]->user_login;
+				echo '</td>';
+				echo $td;
+				$user = new WP_User( $id );
+				if ( isset( $user->roles[0] ) ) {
+					echo $user->roles[0];
+				} else {
+					echo 'No Role on this Site';
+				}
+				echo '</td>';
+				echo $td;
+				echo $users[$id]->display_name;
+				if ( '' != trim( $name = $users[$id]->user_firstname . ' ' . $users[$id]->user_lastname ) ) {
+					echo " ($name)";
+				}
+				echo '</td>';
+				echo $td;
+				echo $users[$id]->user_email;
+				echo '</td>';
+				echo $td;
+				echo '<a class="button-secondary" href="' . admin_url( "user-edit.php?user_id=$id&wp_http_referer=%2Fwp-admin%2Fusers.php%3Fpage%3Djr_dks_settings" ) . '">Profile</a>';  // &wp_http_referer=%2Fwp-admin%2Fusers.php
+				echo '</td></tr>';
+			}
+			echo '</tbody></table>';
 		}
-		echo '</tbody></table>';
 	}
 	?>
 	<h3>
