@@ -3,13 +3,13 @@
 Plugin Name: jonradio Display Kitchen Sink
 Plugin URI: http://jonradio.com/plugins/jonradio-display-kitchen-sink/
 Description: All users will have the Kitchen Sink displayed in Visual mode for both the Page and Post Editors.
-Version: 1.1
+Version: 2.0
 Author: jonradio
 Author URI: http://jonradio.com/plugins
 License: GPLv2
 */
 
-/*  Copyright 2012  jonradio  (email : info@jonradio.com)
+/*  Copyright 2013  jonradio  (email : info@jonradio.com)
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -32,11 +32,43 @@ License: GPLv2
 	My thanks to the original coder, whoever he or she may be.
 */
 
-add_filter( 'tiny_mce_before_init', 'reveal_kitchen_sink' );
- 
-function reveal_kitchen_sink( $args ) {
-	$args['wordpress_adv_hidden'] = FALSE;
-	return $args;
+if ( is_admin() ) {
+	if ( !function_exists( 'get_plugin_data' ) ) {
+		require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+	}
+	global $jr_dks_plugin_data;
+	$jr_dks_plugin_data = get_plugin_data( __FILE__ );
+	$jr_dks_plugin_data['slug'] = basename( dirname( __FILE__ ) );
+	
+	global $jr_dks_path;
+	$jr_dks_path = plugin_dir_path( __FILE__ );
+	/**
+	* Return Plugin's full directory path with trailing slash
+	* 
+	* Local XAMPP install might return:
+	*	C:\xampp\htdocs\wpbeta\wp-content\plugins\jonradio-multiple-themes/
+	*
+	*/
+	function jr_dks_path() {
+		global $jr_dks_path;
+		return $jr_dks_path;
+	}
+	
+	global $jr_dks_plugin_basename;
+	$jr_dks_plugin_basename = plugin_basename( __FILE__ );
+	/**
+	* Return Plugin's Basename
+	* 
+	* For this plugin, it would be:
+	*	jonradio-display-kitchen-sink/jonradio-display-kitchen-sink.php
+	*
+	*/
+	function jr_dks_plugin_basename() {
+		global $jr_dks_plugin_basename;
+		return $jr_dks_plugin_basename;
+	}
+	
+	require_once( plugin_dir_path( __FILE__ ) . 'includes/admin.php' );
 }
 
 ?>

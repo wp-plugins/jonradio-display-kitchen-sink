@@ -3,8 +3,8 @@ Contributors: jonradio
 Donate link: http://jonradio.com/plugins
 Tags: editor, TinyMCE, edit, page, post, plugin, posting, kitchen sink
 Requires at least: 3.0
-Tested up to: 3.6
-Stable tag: 1.1
+Tested up to: 3.6.1
+Stable tag: 2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -15,6 +15,8 @@ All users will have the Kitchen Sink -- the second row of icons displayed in Vis
 When this plugin is activated, all users will see the second row of icons ("The Kitchen Sink") displayed in the Admin panel's Page Edit and Post Edit Visual tab. Clicking the first row's Kitchen Sink icon will only momentarily hide the second row of icons.
 
 The Other Notes (Troubleshooting section), Installation and FAQ tabs provide helpful information, both to get started, and to address concerns you might have about the plugin not working as you were expecting it would.
+
+Introduced in Version 2.0, a Settings page provides a large amount of Troubleshooting information, most notably a Users section that indicates if any Users on the current Site have the "Disable the visual editor when writing" checkbox set in their User Profile, as this prevents them from seeing the Visual Editor and the Kitchen Sink that is part of it.
 
 == Installation ==
 
@@ -44,6 +46,9 @@ You could alter the php code in this plugin. You could also contact the Plugin a
 
 == Changelog ==
 
+= 2.0 =
+* Add Settings page for each Site with detailed Troubleshooting information
+
 = 1.1 =
 * Verify compatiblity with Version 3.4 of WordPress, via RC2
 * Correct name of plugin's main php file and web site page URL to both match folder name
@@ -56,6 +61,9 @@ You could alter the php code in this plugin. You could also contact the Plugin a
 * Clean up php to meet WordPress coding standards
 
 == Upgrade Notice ==
+
+= 2.0 =
+Settings page added to provide Troubleshooting information.
 
 = 1.1 =
 Production version 1.0 incorrectly named the main php file.  WordPress may (i.e. - sometimes) generate a fatal error on activation when updating to Version 1.1.  A second (manual) Activation will complete correctly, and is the recommended solution.  The error is being reported as a bug in Version 3.4 of WordPress.
