@@ -4,7 +4,7 @@ Donate link: http://jonradio.com/plugins
 Tags: editor, TinyMCE, edit, page, post, plugin, posting, kitchen sink
 Requires at least: 3.1
 Tested up to: 3.9
-Stable tag: 2.0.1
+Stable tag: 3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -17,6 +17,8 @@ When this plugin is activated, all users will see the second row of icons ("The 
 The Other Notes (Troubleshooting section), Installation and FAQ tabs provide helpful information, both to get started, and to address concerns you might have about the plugin not working as you were expecting it would.
 
 A Settings page provides a large amount of Troubleshooting information, most notably a Users section that indicates if any Users on the current Site have the "Disable the visual editor when writing" checkbox set in their User Profile, as this prevents them from seeing the Visual Editor and the Kitchen Sink that is part of it.  With the exception of the Users section, a Network Settings page also includes this information for a WordPress Network when this plugin is Network Activated.
+
+**Version 3** is a complete rewrite of the core functionality of the plugin, to address the changes to the Visual Editor that began with WordPress Version 3.9.  jonradio Display Kitchen Sink Version 3 is backwards compatible, all the way back to Version 3.1 of WordPress.  **BUT**, plugin versions prior to Version 3 will not work with WordPress Version 3.9 and above.
 
 == Installation ==
 
