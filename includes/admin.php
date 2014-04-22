@@ -117,25 +117,35 @@ function jr_dks_set_metadata() {
 		But first, be sure User is logged in.
 	*/	
 	if ( 0 !== ( $user_id = get_current_user_id() ) ) {
+		$settings_default = 'editor=tinymce&hidetb=1';
 		$cookie_name = 'wp-settings-1';
 		if ( isset( $_COOKIE[$cookie_name] ) ) {
 			$cookie_value = str_ireplace( 'hidetb=0', 'hidetb=1', $_COOKIE[$cookie_name] );
 		} else {
-			$cookie_value = 'editor=tinymce&hidetb=1';
+			$cookie_value = $settings_default;
 		}
 		/*	Determine Path off Domain to WordPress Address, not Site Address, for Cookie Path value.
 			Which, confusingly enough, is site_url().
 		*/
 		setcookie( $cookie_name, $cookie_value, strtotime( '+1 year' ), parse_url( site_url(), PHP_URL_PATH ) . '/', $_SERVER['SERVER_NAME'] );
 
-		if ( FALSE !== ( $wp_user_settings = get_user_meta( $user_id, 'wp_user-settings', TRUE ) ) ) {
+		global $wpdb;
+		$editor_settings_name = $wpdb->prefix . 'user-settings';
+		$wp_user_settings = get_user_meta( $user_id, $editor_settings_name, TRUE );
+		if ( empty( $wp_user_settings ) ) {
+			$settings = $settings_default;
+			$update = TRUE;
+		} else {
 			parse_str( $wp_user_settings, $settings_array );
-			if ( ( !isset( $settings_array['hidetb'] ) ) || ( '0' === $settings_array['hidetb'] ) ) {
-				/*	Build the Query and Save It
-				*/
+			if ( $update = ( ( !isset( $settings_array['hidetb'] ) ) || ( '0' === $settings_array['hidetb'] ) ) ) {
 				$settings_array['hidetb'] = '1';
-				update_user_meta( $user_id, 'wp_user-settings', build_query( $settings_array ) );
+				$settings = build_query( $settings_array );
 			}
+		}
+		if ( $update ) {
+			/*	Build the Query and Save It
+			*/	
+			update_user_meta( $user_id, $editor_settings_name, $settings );
 		}
 	}
 }

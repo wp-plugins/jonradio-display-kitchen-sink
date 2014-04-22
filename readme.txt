@@ -4,7 +4,7 @@ Donate link: http://jonradio.com/plugins
 Tags: editor, TinyMCE, edit, page, post, plugin, posting, kitchen sink
 Requires at least: 3.1
 Tested up to: 3.9
-Stable tag: 3.0
+Stable tag: 3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -44,6 +44,10 @@ Do not Network Activate this plugin.  Instead, Activate it on each site individu
 
 == Changelog ==
 
+= 3.1 =
+* Use $wpdb->prefix to store Settings to correct Site in a WordPress Network
+* Set WordPress cookie and default WordPress User Setting to 'editor=tinymce&hidetb=1'
+
 = 3.0 =
 * Set HIDETB=1 in both User Meta and the wp-settings-1 Cookie, instead of wordpress_adv_hidden (no longer works after WordPress 3.8.1) in tiny_mce_before_init Filter
 * Remove Kitchen Sink icon from first row
@@ -68,6 +72,9 @@ Do not Network Activate this plugin.  Instead, Activate it on each site individu
 * Clean up php to meet WordPress coding standards
 
 == Upgrade Notice ==
+
+= 3.1 =
+Rewrite to correctly support Second and subsequent sites in a WordPress Network.
 
 = 3.0 =
 Rewrite to support WordPress Version 3.9; old plugin versions no longer work.
