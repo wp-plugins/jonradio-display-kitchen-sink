@@ -1,7 +1,7 @@
 === jonradio Display Kitchen Sink ===
 Contributors: jonradio
 Donate link: http://jonradio.com/plugins
-Tags: editor, TinyMCE, edit, page, post, plugin, posting, kitchen sink
+Tags: adopt-me, editor, TinyMCE, edit, page, post, plugin, posting, kitchen sink
 Requires at least: 3.1
 Tested up to: 4.2
 Stable tag: 3.1
