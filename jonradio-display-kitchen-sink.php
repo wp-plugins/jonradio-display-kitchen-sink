@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: jonradio Display Kitchen Sink
-Plugin URI: http://jonradio.com/plugins/jonradio-display-kitchen-sink/
+Plugin URI: http://zatzlabs.com/lab-notes/
 Description: All users will have the Kitchen Sink displayed in Visual mode for both the Page and Post Editors.
 Version: 3.1
-Author: dgewirtz, jonradio
-Author URI: http://jonradio.com/plugins
+Author: dgewirtz
+Author URI: http://zatzlabs.com/lab-notes/
 License: GPLv2
 */
 
