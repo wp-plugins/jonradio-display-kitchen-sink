@@ -1,6 +1,6 @@
-=== jonradio Display Kitchen Sink ===
+=== Display Kitchen Sink ===
 Contributors: dgewirtz
-Donate link: http://zatzlabs.com/plugins/
+Donate link: http://zatzlabs.com/lab-notes/
 Tags: editor, TinyMCE, edit, page, post, plugin, posting, kitchen sink
 Requires at least: 3.1
 Tested up to: 4.2
@@ -12,6 +12,8 @@ All users will have the Kitchen Sink -- the second row of icons displayed in Vis
 
 == Description ==
 
+*Formerly: "jonradio Display Kitchen Sink"*
+
 When this plugin is activated, all users will see the second row of icons ("The Kitchen Sink") displayed in the Admin panel's Page Edit and Post Edit Visual tab. 	To avoid possible confusion,	the first row's Kitchen Sink icon (last icon on the right) has been removed, because it no longer serves a useful function.
 
 The Other Notes (Troubleshooting section), Installation and FAQ tabs provide helpful information, both to get started, and to address concerns you might have about the plugin not working as you were expecting it would.
@@ -19,6 +21,11 @@ The Other Notes (Troubleshooting section), Installation and FAQ tabs provide hel
 A Settings page provides a large amount of Troubleshooting information, most notably a Users section that indicates if any Users on the current Site have the "Disable the visual editor when writing" checkbox set in their User Profile, as this prevents them from seeing the Visual Editor and the Kitchen Sink that is part of it.  With the exception of the Users section, a Network Settings page also includes this information for a WordPress Network when this plugin is Network Activated.
 
 **Version 3** is a complete rewrite of the core functionality of the plugin, to address the changes to the Visual Editor that began with WordPress Version 3.9.  jonradio Display Kitchen Sink Version 3 is backwards compatible, all the way back to Version 3.1 of WordPress.  **BUT**, plugin versions prior to Version 3 will not work with WordPress Version 3.9 and above.
+
+> <strong>Adoption Notice</strong><br>
+> This plugin was recently adopted by David Gewirtz and ongoing support and updates will continue. Feel free to visit [David's Lab Notes](http://zatzlabs.com/lab-notes/) for additional details and to sign up for emailed news updates.
+
+Special thanks to Jon 'jonradio' Pearkins for creating the plugin and making adoption possible.
 
 == Installation ==
 
