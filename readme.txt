@@ -1,5 +1,5 @@
 ﻿=== jonradio Display Kitchen Sink ===
-Contributors: jonradio
+Contributors: dgewirtz
 Donate link: http://zatzlabs.com/plugins/
 Tags: editor, TinyMCE, edit, page, post
 Requires at least: 3.0
